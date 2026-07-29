@@ -1,18 +1,13 @@
-# Homebrew formula for the bluefin-vm tool. Canonical copy lives here; it is
-# published to the tap at github.com/bluefing/homebrew-tap as
-# Formula/bluefin-vm.rb (install: `brew install bluefing/tap/bluefin-vm`).
-#
-# It ships the TOOL only -- a prebuilt arm64 binary from a GitHub Release, built
-# by .github/workflows/release.yml. The installed tool downloads the VM seed at
-# runtime, so the seed's hosting stays independent of this formula. Bump `url`
-# and `sha256` per release (the version is scanned from the url); release.yml
-# prints both to paste in.
+# The bluefin-vm tool: a prebuilt arm64 binary from the bluefin-vm project's
+# GitHub Release. It ships the TOOL only -- the installed binary downloads the
+# VM seed at runtime, so the seed's hosting stays independent of this formula.
+# The bluefin-vm repo's release workflow prints the `url` + `sha256` to bump
+# below.
 class BluefinVm < Formula
   desc "Download, import, and run a Bluefin VM on Apple Silicon"
   homepage "https://github.com/bluefing/bluefin-vm"
   url "https://github.com/bluefing/bluefin-vm/releases/download/v0.1.0/bluefin-vm-0.1.0-aarch64-apple-darwin.tar.gz"
-  # From the v0.1.0 GitHub Release (release.yml emits it); bump per release.
-  # The version is scanned from the url, so only url + sha256 change.
+  # No `version` line -- Homebrew scans it from the url.
   sha256 "602c2a71140eb477d732ab64ff25f34e458fbbfda43754d6bc79cdda5c2f4a08"
   license "Apache-2.0"
 
