@@ -6,9 +6,9 @@
 class BluefinVm < Formula
   desc "Download, import, and run a Bluefin VM on Apple Silicon"
   homepage "https://github.com/bluefing/bluefin-vm"
-  url "https://github.com/bluefing/bluefin-vm/releases/download/v0.2.0/bluefin-vm-0.2.0-aarch64-apple-darwin.tar.gz"
+  url "https://github.com/bluefing/bluefin-vm/releases/download/v0.3.0/bluefin-vm-0.3.0-aarch64-apple-darwin.tar.gz"
   # No `version` line -- Homebrew scans it from the url.
-  sha256 "34314809773ab18491ee5bde5f66c988e0c3fefe6330e0611f5b2122fe646e0e"
+  sha256 "8f0bdfe38048b04ca1e6289a27553aa176a742a515645f2962611684dfc2c240"
   license "Apache-2.0"
 
   # Apple Silicon only: the tool drives Apple's Virtualisation framework, and
