@@ -1,8 +1,9 @@
-# The bluefin-vm tool: a prebuilt arm64 binary from the bluefin-vm project's
+# The bluefin-vm tool: a pre-built arm64 binary from the bluefin-vm project's
 # GitHub Release. It ships the TOOL only -- the installed binary downloads the
-# VM seed at runtime, so the seed's hosting stays independent of this formula.
-# The bluefin-vm repo's release workflow prints the `url` + `sha256` to bump
-# below.
+# disk image at runtime, so the image's hosting stays independent of this
+# formula. That project's release workflow rewrites the `url` and `sha256`
+# below and pushes the bump here. Editing them by hand is the fallback for
+# when that step fails.
 class BluefinVm < Formula
   desc "Download, import, and run a Bluefin VM on Apple Silicon"
   homepage "https://github.com/bluefing/bluefin-vm"
